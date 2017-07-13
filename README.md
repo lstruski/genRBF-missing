@@ -24,11 +24,11 @@ python setup.py build_ext --inplace
 
 ## Usage
 
-The file '[main_demo.py](https://github.com/struski2/genRBF-missing/blob/master/main_demo.py)' shows how to use genRBF to SVM. If you want run this file, type the following command in terminal:
+The file '[main_demo.py](https://github.com/struski2/genRBF-missing/blob/master/main_demo.py)' applies genRBF to SVM classifier. To run this demo, type the following command in terminal:
 ```
 ./main_demo.py ./data/
 ```
-In directory [genRBF-missing/data/](https://github.com/struski2/genRBF-missing/tree/master/data/) are files with missing data: *train data*, *test data* and their labels. Files *mu.txt*, *cov.txt* you can create using the file [norm.R](https://github.com/struski2/genRBF-missing/blob/master/norm.R):
+A directory [genRBF-missing/data/](https://github.com/struski2/genRBF-missing/tree/master/data/) contains exemplary data with missing attributes: *train data*, *test data* and their labels. Files *mu.txt*, *cov.txt* contain covariance matrix and mean estimated over train data and were created with use of [norm.R](https://github.com/struski2/genRBF-missing/blob/master/norm.R):
 ```
 ./norm.R ./data/train_data.txt ./data/
 ```
