@@ -1,11 +1,6 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-
-from __future__ import print_function, division, unicode_literals
-
 from copy import deepcopy
 
-import cRBFkernel as f
+from genRBF_source import cRBFkernel as f
 import numpy as np
 
 __author__ = "Łukasz Struski"
@@ -13,8 +8,7 @@ __author__ = "Łukasz Struski"
 
 # read data potentially with missing values
 def read_data(path, sep=','):
-    data = np.genfromtxt(path, delimiter=sep)
-    return data
+    return np.genfromtxt(path, delimiter=sep)
 
 
 def whiten_matrix(covariance_matrix):
@@ -63,7 +57,7 @@ class RBFkernel(object):
 
     def _info(self, fill):
         """
-        This function collects informations about missing values and puts 
+        This function collects informations about missing values and puts
         into missing coordinates from fill vector.
         :param data: dataset, numpy asrray, shape like (n_samples, n_features)
         :param fill: vector , numpy array, shape like (n_features)
